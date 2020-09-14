@@ -1,4 +1,21 @@
 const cityForm = document.querySelector('form');
+const display = document.querySelector('.display')
+const details = document.querySelector('.details')
+
+const updateDisplay = data => {
+  const cityDetails = data.cityDetails;
+  const weather = data.weather;
+
+  details.innerHTML = `
+    <h5>${cityDetails.EnglishName}</h5>
+    <div>${weather.WeatherText}</div>
+    <div class="temperature">
+      <span>${weather.Temperature.Imperial.Value}</span>
+      <span>&deg;F</span>
+    </div>
+  `
+
+}
 
 const updateCity = async (city) => {
   const cityDetails = await getCity(city);
@@ -17,5 +34,7 @@ cityForm.addEventListener('submit', e => {
   const city = cityForm.city.value.trim();
   cityForm.reset();
 
-  updateCity(city).then(data => console.log(data));
+  updateCity(city)
+    .then(data => updateDisplay(data))
+    .catch(err => console.log(err));
 })
