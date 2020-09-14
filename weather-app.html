@@ -9,7 +9,25 @@
     <link rel="stylesheet" href="weather-app.css">
   </head>
   <body>
-
+    <header>
+      <h1>Weather Ninja</h1>
+      <form class="change-location">
+        <label for="city">Enter location for weather information</label>
+        <input type="text" name="city">
+      </form>
+    </header>
+    <main class="info">
+      <img class="info-image" src="http://placehold.jp/400x300.png">
+      <div class="icon"></div>
+      <div class="details">
+        <h5>City</h5>
+        <div>Weather Condition</div>
+        <div class="temperature">
+          <span>temperature</span>
+          <span>&deg;F</span>
+        </div>
+      </div>
+    </main>
 
     <script src="forecast.js"></script>
     <script src="weather-app.js"></script>
