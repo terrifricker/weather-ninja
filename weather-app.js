@@ -13,7 +13,11 @@ const updateDisplay = data => {
       <span>${weather.Temperature.Imperial.Value}</span>
       <span>&deg;F</span>
     </div>
-  `
+  `;
+
+  if (display.classList.contains('hidden')) {
+    display.classList.remove('hidden');
+  }
 
 }
 
