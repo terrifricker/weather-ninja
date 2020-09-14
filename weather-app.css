@@ -11,6 +11,8 @@ body {
 header input {
   margin-top: 10px;
   width: 100%;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 main {
