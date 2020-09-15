@@ -1,22 +1,23 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   max-width: 400px;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
-  margin: 20px auto;
 }
-
+h1 {
+  margin: 0;
+  padding: 10px;
+}
 header input {
-  margin-top: 10px;
   width: 100%;
   font-size: 1.2rem;
-  line-height: 2rem;
+  line-height: 1.5rem;
 }
 
 main {
-  margin-top: 50px;
+  margin-top: 20px;
   text-transform: uppercase;
 }
 .hidden {
@@ -30,4 +31,8 @@ main {
   border-radius: 50%;
   margin: 0 auto;
   margin-bottom: -50px;
+}
+.details h5, .details div {
+  margin: 10px;
+  font-size: 1rem;
 }
